@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.7.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Comfy Store || Home</title>
+  </head>
+  <body>
+    <div class="hero">
+      <i class="fas fa-bars"></i>
+      <nav class="nav">
+        <div class="navigators">
+          <i class="fas fa-times"></i>
+          <ul>
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./products.html">products</a></li>
+            <li><a href="./about.html">about</a></li>
+          </ul>
+        </div>
+        <img class="comfy" src="./assets/logo-white.svg" alt="" />
+        <div class="cart">
+          <i class="fas fa-shopping-cart"><span>2</span></i>
+        </div>
+      </nav>
+
+      <div class="center-elem">
+        <h1>rest, relax, unwind</h1>
+        <p>embrace your choices - we do</p>
+        <button>shop now</button>
+      </div>
+    </div>
+    <div class="featured-heading">
+      <div class="featured-line"></div>
+      <h1>featured</h1>
+      <div class="featured-line"></div>
+    </div>
+    <div class="featured-grid">
+      <div class="featured-element">
+        <div class="featured-element-div">
+          <img src="./assets/product-1.jpeg" alt="" />
+          <div class="icon-container">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
+        <h5>high-back bench</h5>
+        <p>$9.99</p>
+      </div>
+      <div class="featured-element">
+        <div class="featured-element-div">
+          <img src="./assets/product-2.jpg" alt="" />
+          <div class="icon-container">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
+        <h5>Leather Sofa</h5>
+        <p>$9.99</p>
+      </div>
+      <div class="featured-element">
+        <div class="featured-element-div">
+          <img src="./assets/product-5.jpg" alt="" />
+          <div class="icon-container">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
+        <h5>Entertainment Center</h5>
+        <p>$9.99</p>
+      </div>
+    </div>
+    <div class="btn-cont">
+      <button
+        id="all-products"
+        onclick="document.location.pathname=('/products.html')"
+      >
+        all products
+      </button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

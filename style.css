@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.hero {
+  width: 100vw;
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+    url("./assets/main-bcg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 10px;
+}
+.nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 10px;
+  align-items: center;
+}
+.navigators {
+  width: 45%;
+}
+.fa-bars {
+  z-index: 20;
+  color: #fff;
+  background-color: #ba5d2c;
+  font-size: 1.75rem;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: none;
+}
+.fa-times {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .navigators {
+    width: 30%;
+  }
+  .hero {
+    padding: 0 3rem;
+  }
+}
+@keyframes times {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+.toggle-sidebar {
+  visibility: visible;
+}
+@media screen and (max-width: 750px) {
+  .hero {
+    height: 60vh;
+  }
+  .fa-bars {
+    display: block;
+    z-index: 10;
+    position: fixed;
+    left: 10px;
+    top: 1.75rem;
+    cursor: pointer;
+  }
+  .comfy {
+    margin-left: 5rem;
+  }
+  .navigators {
+    position: fixed;
+    visibility: hidden;
+    transform: translateY(-100vh);
+
+    top: 0px;
+    bottom: 0px;
+    width: 90%;
+    margin: 5rem auto;
+    z-index: 10;
+    background-color: #fff;
+    right: 0px;
+    left: 0px;
+    height: 40vh;
+    padding: 6rem 4rem 4rem 4rem;
+    border-radius: 5px;
+  }
+  .navigators ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-left: 10px;
+    justify-content: space-between;
+  }
+  .navigators ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    color: #618d98;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+  .navigators ul a {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    color: #618d98;
+
+    text-transform: capitalize;
+  }
+  .fa-times {
+    display: block;
+    color: red;
+    font-size: 2rem;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    margin: 2rem 2rem 3rem 0;
+    right: 0;
+    animation-name: times;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: animation linear 1s;
+  }
+}
+.navigators ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 10px;
+  justify-content: space-between;
+}
+.navigators ul a {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.35rem;
+  text-transform: capitalize;
+}
+.cart {
+  color: #fff;
+  margin-right: 1.5rem;
+}
+.cart i {
+  font-size: 1.75rem;
+  position: relative;
+}
+.cart span {
+  position: absolute;
+  width: 1.75rem;
+  height: 1.75rem;
+  top: -15px;
+  right: -10px;
+  font-size: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  background-color: #ba5d2c;
+}
+.center-elem {
+  margin-top: 10vh;
+  text-transform: capitalize;
+  color: #fff;
+  margin-left: 20px;
+}
+.center-elem h1 {
+  font-family: cursive;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+.center-elem p {
+  font-family: cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+.center-elem button {
+  padding: 15px 25px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: cursive;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.featured-heading {
+  margin: 5rem auto 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.featured-heading h1 {
+  display: inline;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 3rem;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 2px;
+  margin: 0 10px;
+}
+.featured-line {
+  width: 50px;
+
+  border-top: 2px solid #222;
+  background-color: #222;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  width: 80vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 900px) {
+  .featured-grid {
+    display: grid;
+    grid-gap: 30px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.featured-element {
+  height: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.featured-element-div {
+  width: 100%;
+  position: relative;
+}
+.icon-container {
+  position: absolute;
+
+  top: 50%;
+  left: 45%;
+  right: 50%;
+  bottom: 50%;
+  display: flex;
+}
+.icon-container i {
+  color: #fff;
+  background-color: #ba5d2c;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0 10px 0 0;
+  font-size: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  /* visibility: hidden; */
+}
+
+.featured-element img {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+}
+.featured-element h5 {
+  color: #618d98;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+.featured-element p {
+  color: grey;
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.btn-cont {
+  width: 100%;
+  text-align: center;
+}
+#all-products {
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #ba5d2c;
+  border: 0;
+  /* width: 100%; */
+  margin: 3rem auto;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  text-align: center;
+  border-radius: 3px;
+}
+.toggle {
+  z-index: 5;
+  display: block;
+}
+.about-desc {
+  font-family: cursive;
+  margin: 0 auto;
+  width: 90%;
+  line-height: 30px;
+  color: #618d98;
+  max-width: 900px;
+  margin-bottom: 3rem;
+}
+.about a {
+  color: #618d98;
+}
+.toggle-sidebar {
+  visibility: visible;
+  z-index: 20;
+}
