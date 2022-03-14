@@ -3,6 +3,19 @@
   margin: 0;
   padding: 0;
 }
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #f1f5f8;
+  border-radius: 5rem;
+}
 body {
   overflow-x: hidden;
 }
@@ -260,6 +273,7 @@ a {
   right: 50%;
   bottom: 50%;
   display: flex;
+  visibility: hidden;
 }
 .icon-container i {
   color: #fff;
@@ -273,9 +287,11 @@ a {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  /* visibility: hidden; */
+  /* display: none; */
 }
-
+.featured-element:hover .icon-container {
+  visibility: visible;
+}
 .featured-element img {
   width: 100%;
   height: 300px;
